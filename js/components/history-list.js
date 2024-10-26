@@ -33,11 +33,6 @@ function reRender() {
 }
 
 export function renderHistoryList() {
-  // TODO: 데이터 매핑
-  // TODO: 오름차순으로 목록 나열
-  // TODO: 항목의 시간 포맷 변경: `HH:mm`
-  // TODO: 금액 콤마 포맷 맞추기
-
   $sectionHistory.innerHTML = store.dateList
     .map(({ date, id: dateId }) => {
       const detail = store.detailList[dateId];

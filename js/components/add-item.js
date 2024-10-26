@@ -54,9 +54,9 @@ function addItemEditEventListener() {
 
     toHidden($addItemDetail);
     toShow($addItemButton);
-    initAddItemInput(); // 입력창 초기화
+    initAddItemInput(); 
 
-    reRender(); // 업뎃 내역 렌더링
+    reRender();
   });
 }
 
