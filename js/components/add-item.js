@@ -16,8 +16,8 @@ export function initAddItem() {
 }
 
 function renderAddItemButton() {
-  if (store.isFirstEdit) return;
-  toShow($addItemButton);
+  if (store.isFirstEdit) return; // 값을 처음 입력하는거면 그냥 리턴
+  toShow($addItemButton); // 아니면 내역 추가 버튼 활성화
 }
 
 function addItemEditEventListener() {
@@ -28,7 +28,7 @@ function addItemEditEventListener() {
 
   $addItemDetailButton.addEventListener("click", function (event) {
     if (
-      !validateRequired({
+      !validateRequired({ // 입력값들이 유효한지 체크
         category: $addItemCategory.value,
         description: $addItemDescription.value,
         price: $addItemPrice.value,
@@ -54,9 +54,9 @@ function addItemEditEventListener() {
 
     toHidden($addItemDetail);
     toShow($addItemButton);
-    initAddItemInput();
+    initAddItemInput(); // 입력창 초기화
 
-    reRender();
+    reRender(); // 업뎃 내역 렌더링
   });
 }
 
